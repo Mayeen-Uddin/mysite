@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome to Chaser</title>
+</head>
+<body>
+	<div style="  position:absolute; top:20px;left:20%;width:800px;height:1024px;background-color:#2B4B6D;padding:50px;" align=center>
+		<div style="background:#8800ff;width:750px;height:300px;padding:20px" align=center >
+			<h1 align=center ><font color=gold><br>Bismilla Her-Rahmaanir Raheem</font></h1>
+			<p align =center =red ><font color=yellow><i>We thankful to almighty Allah, How create us. <br>
+			We are servant of Allah(swt.)</i></br>Created to test our django project.</font></p>
+			<p align=center style="font-family:monospace;"><font size=11px color=pink>Thanks</font></p>
+			<p align=right><TT><font color=FF5500><B><br>&copy;Md. Mayeen Uddin</font></B></TT></p>
+		</div>
+		<div style="width:720px;height:20px;background:#2B4B6D;"> </div>
+		<div style="background:#FFFFFF;width:750px;height:630px;padding:20px">
+			<article>
+				<a href="{% url 'home' %}">Home</a>
+				<p>
+					<span style="color:green">
+						{% if years < 10 %}
+							You are a child
+						{% elif years < 18 %}
+							You are a teenager
+						{% else %}
+							You are an adult!
+						{% endif %}
+					</span>
+			</article>
+		</div>
+	</div>
+</body>
+</html>

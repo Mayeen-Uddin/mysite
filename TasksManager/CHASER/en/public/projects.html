@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title_html %}
+	Projects list
+{% endblock %}
+{% block h1 %}
+	Projects list
+{% endblock %}
+{% block article_content %}
+	<h3>{{ action }}</h3>
+	{% if queryset_project|length > 0 %}
+		<table>
+			<thead>
+				<tr>
+					<td>ID</td>
+					<td>Title</td>
+					<td>Client</td>
+				</tr>
+			</thead>
+			<tbody>
+			{% for project in queryset_project %}
+				<tr>
+					<td>{{ project.id }}</td>
+					<td>{{ project.title }}</td>
+					<td>{{ project.client_name }}</td>
+				</tr>
+			{% endfor %}
+			</tbody>
+		</table>
+		<p>The first Project is: <span>{{project}}</span></p>
+	{% else %}
+		<span>No project.</span>
+	{% endif %}
+{% endblock %}

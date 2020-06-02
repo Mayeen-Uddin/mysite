@@ -1,0 +1,29 @@
+.outerpage {
+	position:absolute; 
+	top:20px;
+	left:20%;
+	width:800px;
+	height:1024px;
+	background-color:#2B4B6D;
+	padding:50px;
+}
+.banneroutline {
+	background:#8800ff;
+	width:750px;
+	height:300px;
+	padding:20px;
+}
+.p1{
+	font-family:monospace;
+}
+.sefarator{
+	width:720px;
+	height:20px;
+	background:#2B4B6D;
+}
+.workspace{
+	background:#FFFFFF;
+	width:750px;
+	height:630px;
+	padding:20px;
+}

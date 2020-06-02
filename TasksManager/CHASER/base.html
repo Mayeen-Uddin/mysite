@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head >
+	{% load static %}
+	<link href="{% static "css/style.css" %}" rel="stylesheet" type="text/css" />
+	<title>{% block title_html %}{% endblock %}</title>
+</head>
+<body>
+	<div class="outerpage" align=center>
+		<div class="banneroutline" align=center >
+			<h1 align=center ><font color=gold><br>Bismilla Her-Rahmaanir Raheem</font></h1>
+			<p align =center =red ><font color=yellow><i>We thankful to almighty Allah, How create us. <br>
+			We are servant of Allah(swt.)</i></br>Tasks Manager - {% block h1 %}{% endblock %}</font></p>
+			<p align=center class="p1"><font size=11px color=pink>Thanks</font></p>
+			<p align=right><TT><font color=FF5500><B><br>&copy;Md. Mayeen Uddin</font></B></TT></p>
+		</div>
+		<div class="sefarator"> </div>
+		<div class="workspace">
+			<article>
+				<a href="{% url 'home' %}">Home</a>
+				{% block article_content %}{% endblock %}
+			</article>
+		</div>
+	</div>
+</body>
+</html>

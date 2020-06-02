@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome to Chaser</title>
+</head>
+<body>
+	<div style="  position:absolute; top:20px;left:20%;width:800px;height:1024px;background-color:#2B4B6D;padding:50px;" align=center>
+		<div style="background:#8800ff;width:750px;height:300px;padding:20px" align=center >
+			<h1 align=center >
+				<font color=gold><br>Bismilla Her-Rahmaanir Raheem</br>Welcome to Chaser</font>
+			</h1>
+			<p align =center =red ><font color=yellow>This is our home page.</br>Created to test for our django project.</font></p>
+			<p align=center style="font-family:monospace;"><font size=11px color=pink>Thanks</font></p>
+			<p align=right><TT><font color=FF5500><B><br>&copy;Md. Mayeen Uddin</font></B></TT></p>
+		</div>
+		<div style="width:720px;height:20px;background:#2B4B6D;"> </div>
+		<div style="background:#FFFFFF;width:750px;height:630px;padding:20px">
+			<article>
+				Hello world !
+				<br />
+				<a href="{% url 'public_connection' %}">Connection</a>
+				<a href="{% url 'view_projects' %}">View Projects</a>
+				<a href="{% url 'about' %}">About</a>
+				<a href="http://www.google.com">Google link !</a>
+				<a href="{% url 'create_developer' %}">Create developer</a>
+				
+			</article>
+			<article>
+				<span style="color:blue">{{my_var}}</span>
+				<span style="color:green">
+						{% if years < 10 %}
+							You are a child
+						{% elif years < 18 %}
+							You are a teenager
+						{% else %}
+							You are an adult!
+						{% endif %}
+				</span>				
+				<font style="text-align: left">
+					<ul>
+						{% for city in array_city %}
+							<li>
+								{{ city }}
+							</li>
+						{% endfor %}
+					</ul>
+				</font>
+				<span style="color:lightblue"> {{ my_hello | lower }} </span>
+				<span style="color:lightblue"> {{ my_hello | upper }} </span>
+				<span style="color:lightblue"> {{ my_hello | capfirst }} </span>
+				<div>
+					{% autoescape on %}
+					<div>
+						<p>{{ variable1 }}</p>
+						<p>
+							<span>
+								{{ variable2|safe }}
+							</span>
+							{% endautoescape %}
+							{% autoescape off %}
+						</p>
+					</div>
+						<span>{{ variable3 }}</span>
+						<span>{{ variable4|escape }}</span>
+						{% endautoescape %}
+						<span>{{ variable5 }}</span>
+				</div>
+				<p> a quick brown fox<span>{{ text|linebreaks }}</span>jamps over the lazy dog</p>
+			</article>
+		</div>
+	</div>
+</body>
+</html>
