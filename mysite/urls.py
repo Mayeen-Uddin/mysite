@@ -21,7 +21,12 @@ from django.views.generic import RedirectView
 from django.conf import settings
 from django.conf.urls.static import static
 
-from TasksManager import views
+#from TasksManager.views import TasksManager
+from TasksManager.views import connection
+from TasksManager.views import project_detail
+from TasksManager.views import projects
+from TasksManager.views import create_developer
+from TasksManager.views import about
 
 
 #urlpatterns = [
@@ -35,11 +40,11 @@ from TasksManager import views
 urlpatterns = [
 	path('admin/', admin.site.urls),
 #	path('', views.index, name='index'),
-	re_path(r'^about/?', views.about, name="about"),
-	re_path(r'^connection-TasksManager$', views.connection, name="public_connection"),
-	re_path(r'^projects-TasksManager$', views.projects, name="view_projects"),
-	re_path(r'^project-detail-(?P<pk>\d+)$', views.project_detail, name="project_detail"),
-	re_path(r'^create-developer$', views.create_developer, name="create_developer"),
+	re_path(r'^about/?', about.page, name="about"),
+	re_path(r'^connection-TasksManager$', connection.page, name="public_connection"),
+	re_path(r'^projects-TasksManager$', projects.page, name="view_projects"),
+	re_path(r'^project-detail-(?P<pk>\d+)$', project_detail.page, name="project_detail"),
+	re_path(r'^create-developer$', create_developer.page, name="create_developer"),
 ]
 
 urlpatterns += [

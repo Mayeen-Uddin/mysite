@@ -7,6 +7,7 @@
 	{% endblock %}
 {% block article_content %}
 	<form method="post" action="{% url "create_developer" %}" >
+    {% csrf_token %}
 		<table>
 			<tr>
 				<td>Name</td>
@@ -39,7 +40,7 @@
 			<tr>
 				<td></td>
 				<td>
-					<input type="submit" value="Valid" />
+					<input type="submit" value="Create" />
 				</td>
 			</tr>
 		</table>
